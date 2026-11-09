@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101020">
+<meta name="description" content="Dima Studio Voice Changer — бесплатный онлайн-изменитель голоса. Озвучивай текст и меняй голос с помощью 50 эффектов.">
+<meta name="keywords" content="voice changer, изменить голос, изменитель голоса онлайн, голосовые эффекты, робот, монстр, диктофон, озвучка текста, text to speech, voice effects, Dima Studio">
+<meta name="author" content="Dima Studio">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dima Studio Voice Changer">
+<meta property="og:description" content="50 голосовых эффектов. Озвучка текста и изменение записанного голоса.">
+<title>Dima Studio — Voice Changer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#"> <span>🎙️</span> DIMA STUDIO</a><span class="tag">VOICE CHANGER</span></header>
+<main>
+<section class="hero"><div class="eyebrow">50 VOICE PRESETS</div><h1>Твой голос.<br><span>Твои правила.</span></h1><p>Озвучивай текст или меняй собственную запись.</p></section>
+<nav class="tabs"><button class="tab active" data-tab="text">✍️ Текст → Голос</button><button class="tab" data-tab="record">🎤 Запись → Эффект</button></nav>
+<section id="textPanel" class="panel">
+<label for="textInput">Текст для озвучивания</label><textarea id="textInput" placeholder="Напиши здесь что-нибудь...">Привет! Это Dima Studio Voice Changer!</textarea>
+<div class="row"><label for="systemVoice">Системный голос</label><select id="systemVoice"><option value="">Автоматический</option></select></div>
+<div class="row"><label for="search">Найти эффект</label><input id="search" placeholder="Например: робот, монстр..."></div>
+<div class="selected">Выбран: <b id="chosenName">Робот</b></div>
+<div id="voiceGrid" class="voice-grid"></div>
+<div class="actions"><button id="speak" class="primary">▶ Воспроизвести</button><button id="stopSpeech" class="secondary">■ Стоп</button></div>
+<p class="hint">Озвучивание использует голоса, доступные в браузере или операционной системе. Эффекты меняют высоту и скорость речи.</p>
+</section>
+<section id="recordPanel" class="panel hidden">
+<div class="record-info"><div class="mic">🎙️</div><h2>Запиши свой голос</h2><p>Разреши доступ к микрофону, запиши фразу и выбери эффект.</p></div>
+<div class="actions"><button id="startRec" class="primary">● Начать запись</button><button id="stopRec" class="secondary" disabled>■ Завершить</button></div>
+<div id="recStatus" class="status">Ожидание записи</div>
+<audio id="audioPreview" controls class="audio hidden"></audio>
+<div class="row"><label for="recordSearch">Найти эффект</label><input id="recordSearch" placeholder="Поиск эффекта..."></div>
+<div class="selected">Эффект записи: <b id="recordChosen">Робот</b></div>
+<div id="recordGrid" class="voice-grid"></div>
+<div class="actions"><button id="playProcessed" class="primary" disabled>▶ Прослушать с эффектом</button><button id="downloadAudio" class="secondary" disabled>⬇ Скачать запись</button></div>
+<p class="hint">Эффект применяется при прослушивании. Скачать можно исходную запись.</p>
+</section>
+<footer>© Dima Studio · Voice Changer</footer>
+</main>
+<script src="script.js"></script>
+</body></html>
